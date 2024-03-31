@@ -1,0 +1,188 @@
+:root {
+    --primary: rgb(103, 38, 32);
+    --primary2: rgb(140, 52, 44);
+    --primary3: rgb(171, 64, 54);
+    --secondary: rgb(56, 66, 59);
+    --tertiary: rgb(252, 161, 125);
+    --white: #fff;
+    --black: #000;
+    --menu-mask: url(https://gist.githubusercontent.com/avocitty/68546737e2f64879f9e72e98084a1b62/raw/5a0b2a17ddb968b7f943f66542993a46c9282dd6/menu.svg);
+}
+
+header {
+    height: 500px;
+}
+
+body {
+    font-family: "EB Garamond", serif;
+    position: relative;
+}
+
+/* Navbar CSS */
+.navbar {
+    position: fixed;
+    width: 100%;
+    background-color: var(--white);
+    opacity: .5;
+    z-index: 100;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    transition: opacity 0.5s ease;
+    /* Add transition for smooth opacity change */
+}
+
+.navbar:hover {
+    background-color: #672620;
+    color: var(--white);
+    opacity: 1;
+}
+
+.navbar:hover .navbar-brand,
+.navbar:hover .navbar-nav .nav-link {
+    color: var(--white);
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: var(--black);
+    font-weight: 500;
+    padding: 0.5rem;
+}
+
+.navbar-nav .nav-link {
+    border-radius: 5px;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: var(--white);
+    color: var(--primary) !important;
+}
+
+.navbar-toggler-icon {
+    background-image: none !important;
+    background-color: var(--black);
+    mask: var(--menu-mask) no-repeat center;
+    width: 1rem;
+}
+
+.navbar-toggler {
+    border: 1px solid transparent;
+}
+
+.navbar:hover .navbar-toggler {
+    border: 1px solid var(--white);
+}
+
+.navbar:hover .navbar-toggler .navbar-toggler-icon {
+    background-color: var(--white);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+    border-radius: 5px;
+}
+
+/* Carousel CSS */
+.carousel {
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 500px;
+    /* Adjust height as needed */
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1.25rem 5rem;
+}
+
+.carousel-caption:hover {
+    cursor: default;
+}
+
+.quote1 {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: "EB Garamond", serif;
+    text-transform: uppercase;
+}
+
+.quote1 p {
+    margin-bottom: 0;
+}
+
+.quote1 p:last-child {
+    font-size: 24px;
+}
+
+.quote1 p::before {
+    content: '';
+    position: relative;
+    top: 10px;
+    left: 40px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: none;
+    box-shadow: 150px 0 30px 10px var(--primary), 0px 0 40px 20px var(--primary2), 75px 0 50px 30px var(--primary3);
+    z-index: -1;
+}
+
+.quote2 {
+    font-size: 48px;
+    max-width: 400px;
+    font-family: "Dancing Script", cursive;
+}
+
+.quote2::before {
+    content: '';
+    position: relative;
+    top: 10px;
+    left: 40px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: none;
+    box-shadow: 150px 0 30px 10px var(--primary), 0px 0 40px 20px var(--primary2), 75px 0 50px 30px var(--primary3);
+    z-index: -1;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    opacity: 0%;
+}
+
+.carousel-control-next:hover,
+.carousel-control-prev:hover {
+    opacity: 100%;
+}
+
+/* Section CSS */
+.section {
+    padding: 50px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-content {
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
